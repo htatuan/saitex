@@ -21,7 +21,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 DefaultPage = __decorate([
                     core_1.Component({
                         selector: "default-page",
-                        template: "<div>hello Tuan</div>"
+                        templateUrl: "src/modules/app/defaultPage.html"
                     })
                 ], DefaultPage);
                 return DefaultPage;

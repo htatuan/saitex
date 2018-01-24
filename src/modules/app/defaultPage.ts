@@ -2,7 +2,7 @@
 import {Component} from "@angular/core";
 @Component({
     selector:"default-page",
-    template:"<div>hello Tuan</div>"
+    templateUrl:"src/modules/app/defaultPage.html"
     
 })
 export class DefaultPage{}
