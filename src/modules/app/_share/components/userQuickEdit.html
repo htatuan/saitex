@@ -1,41 +1,20 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th>Username</th>
-        <th>Last Name</th>
-        <th>First Name</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        
-        <td>{{user.userName}}</td>
-        <td>{{user.lastName}}</td>
-        <td>{{user.firstName}}</td>
-        <td (click)="onEditClicked(user)"><button>Edit</button></td>
-      </tr>
-      
-    </tbody>
-  </table>
-<user-quick-edit *ngIf="selectedUser"  [(firstName)]="selectedUser.firstName" ></user-quick-edit>
-  <!-- <div class="x_panel">
+<div class="x_panel">
     <div class="x_title">
       <h2>Form Design <small>different form elements</small></h2>
      
     </div>
     <div class="x_content">
       <br>
-      <form *ngIf="selectedUser" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+      <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
 
         <div class="form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 col-xs-12">
-            <input type="text" name="first-name"  class="form-control col-md-7 col-xs-12" [(ngModel)]=selectedUser.firstName >
+            <input (change)="TextChange($event)" type="text" name="first-name"  class="form-control col-md-7 col-xs-12" [(ngModel)]="firstName" >
           </div>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -47,9 +26,9 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <input  class="form-control col-md-7 col-xs-12" [(ngModel)]=selectedUser.userName type="text" name="middle-name">
           </div>
-        </div>
+        </div> -->
        
 
       </form>
     </div>
-  </div> -->
+  </div>
